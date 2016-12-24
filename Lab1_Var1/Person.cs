@@ -16,7 +16,7 @@ namespace Lab1_Var1
         {
             this.name = "John";
             this.last_name = "Johnson";
-            this.birth_date = new System.DateTime(1990, 1, 1);
+            this.birth_date = new System.DateTime(1990, 2, 2);
         }
 
         public Person(string input_name, string input_last_name, System.DateTime input_birth_date) {
@@ -45,8 +45,17 @@ namespace Lab1_Var1
 
         public int Int_Birth_Date
         {
-            get;
-            set;
+            get
+            {
+                return birth_date.Year * 10000 + birth_date.Month * 100 + birth_date.Day;
+            }
+            set
+            {
+                int year = (int)(value / 10000);
+                int month = (int)((value - year * 10000) / 100);
+                int day = (int)(value - year * 10000 - month * 100);
+                this.birth_date = new System.DateTime(year, month, day);
+            }
         }
 
         public override string ToString()
