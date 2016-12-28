@@ -41,5 +41,19 @@ namespace Test_Lab1_Var1
             Assert.AreEqual("RomaVorontsov11-Nov-92 00:00:00", p.ToString());
             Assert.AreEqual("RomaVorontsov", p.ToShortString());
         }
+        [TestMethod]
+        public void Test_SetProperites()
+        {
+            Person p = new Person();
+            Assert.AreEqual("John", p.Name);
+            Assert.AreEqual("Johnson", p.Last_Name);
+            Assert.AreEqual(new System.DateTime(1990, 2, 2), p.Birth_Date);
+            p.Name = "Mark";
+            p.Last_Name = "Two";
+            p.Birth_Date = new System.DateTime(1950, 2, 3);
+            Assert.AreEqual("Mark", p.Name);
+            Assert.AreEqual("Two", p.Last_Name);
+            Assert.AreEqual(new System.DateTime(1950, 2, 3), p.Birth_Date);
+        }
     }
 }
