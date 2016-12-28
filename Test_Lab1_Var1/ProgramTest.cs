@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Lab1_Var1;
 
 namespace Test_Lab1_Var1
 {
@@ -9,7 +10,6 @@ namespace Test_Lab1_Var1
         [TestMethod]
         public void Test_Program()
         {
-
         }
     }
 }
