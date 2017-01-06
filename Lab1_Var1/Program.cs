@@ -50,8 +50,78 @@ namespace Lab1_Var1
             Console.WriteLine("----------  end ------------\n");
 
             // 9.
-            Console.ReadKey();
+            Console.WriteLine("--------- task 9 ------------");
+            Console.WriteLine("----------  start -------------");
+            Console.WriteLine("Enter array dimensions as two integer values" + 
+                              " divided by a delimiter. The number of rows comes first," +
+                              " second comes the number of columns.\n" +
+                              "Three delimiters allowed: ',' 'x' ' ' (space).");
+            char[] delimiters = { ',', 'x', ' ' };
+            string input_string = Console.ReadLine();
+            string[] splitted_string = input_string.Split(delimiters, 2);
+            int nrow = 0;
+            int ncolumn = 0;
+            int.TryParse(splitted_string[0], out nrow);
+            int.TryParse(splitted_string[1], out ncolumn);
+            // Arrays declarations
+            Exam[] one_dim_array = new Exam[nrow*ncolumn];
+            Exam[,] two_dim_array = new Exam[nrow, ncolumn];
+            Exam[][] jagged_array = new Exam[nrow][];
+            // Arrays initialization
+            for (int i = 0; i < one_dim_array.Length; ++i )
+            {
+                one_dim_array[i] = new Exam();
+            }
+            for (int i = 0; i < nrow; i++)
+            {
+                for (int j = 0; j < ncolumn; j++ )
+                {
+                    two_dim_array[i, j] = new Exam();
+                }
+            }
 
+            for (int i = 0; i < nrow; i++)
+            {
+                jagged_array[i] = new Exam[ncolumn];
+            }
+            for (int i = 0; i < nrow; i++)
+            {
+                for (int j = 0; j < ncolumn; j++)
+                {
+                    jagged_array[i][j] = new Exam();
+                }
+            }
+            // Compare execution time of "assign" operation
+            // for each array type
+            int one_dim_start_time = Environment.TickCount;
+            for (int i = 0; i < one_dim_array.Length; i++ )
+            {
+                one_dim_array[i].Exam_Name = "Numerical Methods";
+            }
+            int one_dim_difference = Environment.TickCount - one_dim_start_time;
+            int two_dim_start_time = Environment.TickCount;
+            for (int i = 0; i < nrow; i++ )
+            {
+                for(int j = 0; j < ncolumn; j++)
+                {
+                    two_dim_array[i, j].Exam_Name = "Numerical Methods";
+                }
+            }
+            int two_dim_difference = Environment.TickCount - two_dim_start_time;
+            int jagged_start_time = Environment.TickCount;
+            for (int i = 0; i < nrow; i++ )
+            {
+                for (int j = 0; j < ncolumn; j++)
+                {
+                    jagged_array[i][j].Exam_Name = "Numerical Methods";
+                }
+            }
+            int jagged_difference = Environment.TickCount - jagged_start_time;
+            Console.WriteLine("Running time for one dimensional array is {0}", one_dim_difference);
+            Console.WriteLine("Running time for two dimensional array is {0}", two_dim_difference);
+            Console.WriteLine("Running time for jagged array is {0}", jagged_difference);
+            Console.WriteLine("----------  end -------------");
+            Console.ReadKey();
         }
     }
 }

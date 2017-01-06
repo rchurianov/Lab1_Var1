@@ -21,7 +21,7 @@ namespace Lab1_Var1
             this.Exam_Name = "Computer Science";
             this.Grade = 5;
             this.Exam_Date = new DateTime(1998, 1, 20);
-            Console.WriteLine("Created new Exam with default constructor.");
+            //Console.WriteLine("Created new Exam with default constructor.");
         }
 
         public override string ToString()
