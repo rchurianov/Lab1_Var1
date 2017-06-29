@@ -8,7 +8,7 @@ IDE: VS 2013
 
 This is an accomplished first practical work assignment. Requirements for the task were taken from: Лабораторные работы по курсу Объектно-Ориентированное программирование: язык программирования C# Березина Н.И.  The VS 2013 project includes inplementation of the following simple classes:
 
-##class **Person**
+## class **Person**
 fields
 * private field of type `string` to store person's name
 * private field of type `string` to strire person's last name
@@ -29,10 +29,10 @@ methods:
 * overridden version of `string ToString()` method, which should return string consisting of all object's fields
 * virtual `string ToShortString()` method, which returns a string consisting of name and last name33
 
-##enum Education
+## enum Education
 { Specialist, Bachelor, SecondEducation}
 
-##class Exam
+## class Exam
 
 has properties:
 * of type `string` for Exam name
@@ -46,7 +46,7 @@ has constructors:
 has methods:
 * overriden `string ToString()` method with returns a string representation of all method fields
 
-##class Student
+## class Student
 
 has fields:
 * private field of type Person to store basic data about a student
@@ -57,5 +57,7 @@ has fields:
 has constructors:
 * with parameters of types `Person`, `Education`, `int`, to initialize those fields
 * default constructor
+
+## Workload
 
 Compare execution time of some simple operation performed on each object for one-dimensional, two-dimensional and jagged arrays of those objects.
