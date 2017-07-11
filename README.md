@@ -17,6 +17,8 @@ The application does not account for any input errors, does not catch any except
 For the application to output times bigger than zero, numbers of rows and colums should be higher than 1000.
 Number of rows and columns higher then 5000 will cause OutOfMemoryException.
 
+For the application to run, it should be built first from provided sources. It was tested in AnyCPU mode.
+
 Details of Student, Exam and other classes follow.
 
 The VS 2013 project includes inplementation of the following simple classes:
