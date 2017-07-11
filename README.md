@@ -7,7 +7,7 @@ Language: C#
 IDE: VS 2013
 
 This is a simple console application.
-In the main method it creates a `Student` object, changes data of the `Student` object and prints the result of every operation in the standart output.
+In the main method it creates a `Student` object, changes data of the `Student` object and prints the result of every operation to the standart output.
 Then it asks for the input of two integers: number of rows and colums of an array.
 The application creates three arrays of `Exam` objects: one-dimensional, two-dimensional and a jagged array using those input numbers.
 Then it performs change of data for all objects in those three arrays.
