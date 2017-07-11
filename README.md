@@ -6,7 +6,20 @@ Language: C#
 
 IDE: VS 2013
 
-This is an accomplished first practical work assignment. Requirements for the task were taken from: Лабораторные работы по курсу Объектно-Ориентированное программирование: язык программирования C# Березина Н.И.  The VS 2013 project includes inplementation of the following simple classes:
+This is a simple console application.
+In the main method it creates a `Student` object, changes data of the `Student` object and prints the result of every operation in the standart output.
+Then it asks for the input of two integers: number of rows and colums of an array.
+The application creates three arrays of `Exam` objects: one-dimensional, two-dimensional and a jagged array using those input numbers.
+Then it performs change of data for all objects in those three arrays.
+It prints the execution time of the loops.
+
+The application does not account for any input errors, does not catch any exceptions.
+For the application to output times bigger than zero, numbers of rows and colums should be higher than 1000.
+Number of rows and columns higher then 5000 will cause OutOfMemoryException.
+
+Details of Student, Exam and other classes follow.
+
+The VS 2013 project includes inplementation of the following simple classes:
 
 ## class **Person**
 fields
