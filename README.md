@@ -7,15 +7,16 @@ Language: C#
 IDE: VS 2013
 
 This is a simple console application.
-In the main method it creates a `Student` object, changes data of the `Student` object and prints the result of every operation to the standart output.
-Then it asks for the input of two integers: number of rows and colums of an array.
-The application creates three arrays of `Exam` objects: one-dimensional, two-dimensional and a jagged array using those input numbers.
-Then it performs change of data for all objects in those three arrays.
-It prints the execution time of the loops.
+The main method does the following:
 
-The application does not account for any input errors, does not catch any exceptions.
-For the application to output times bigger than zero, numbers of rows and colums should be higher than 1000.
-Number of rows and columns higher then 5000 will cause OutOfMemoryException.
+* creates a `Student` object, outputs object's data to standart output
+* changes data of the `Student` object and prints the result to standart output
+* Adds `Exam` object to the `Student`'s list of Exams and prints the result
+
+* Then it asks the user to input two integers: number of rows and colums of an array.
+The application creates three arrays of `Exam` objects: one-dimensional, two-dimensional and a jagged array using those input numbers.
+Then it changes data in every element of those three arrays.
+It prints the execution time of the loops.
 
 For the application to run, it should be built first from provided sources. It was tested in AnyCPU mode.
 
@@ -76,3 +77,9 @@ has constructors:
 ## Workload
 
 Compare execution time of some simple operation performed on each object for one-dimensional, two-dimensional and jagged arrays of those objects.
+
+## Errors
+
+The application does not account for any input errors, does not catch any exceptions.
+For the application to output times bigger than zero, numbers of rows and colums should be higher than 1000.
+Number of rows and columns higher then 5000 will cause OutOfMemoryException.
